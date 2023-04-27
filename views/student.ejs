@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Student Form To Register Complaint </title>
+<style>
+   .body{
+    background-image: linear-gradient(-45deg, #e32727 0%, #cc1e1e 100%);
+}
+
+.title{
+    font-size: 3rem;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-body{
+    margin: 5% 5%;
+    font-size: 2rem;
+
+    
+}
+
+.main-text{
+   color: floralwhite;
+}
+h2{
+ font-family: Sans-serif; 
+ font-size: 24px;     
+ font-style: normal; 
+ font-weight: bold; 
+ /* color: blue; */
+ text-align: center; 
+ text-decoration: underline
+}
+table{
+ font-family: verdana; 
+ /* color:white;  */
+ font-size: 16px; 
+ font-style: normal;
+ font-weight: bold;
+ /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);  */
+ 
+ border-collapse: collapse; 
+ border: 4px solid #000000;
+ border-style: dashed;
+  
+}
+table.inner{
+ border: 10px
+}
+input[type=text], input[type=email], input[type=number]{
+ width: 50%;
+ padding: 6px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+input[type=submit], input[type=reset]{
+ width: 15%;
+ padding: 8px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+    <form action="/student" method="post">
+    <h2>Student Form To Register Complaint</h3>
+        <table align="center" cellpadding = "10">
+            <!--------------------- First Name ------------------------------------------>
+            <tr>
+                <td>STUDENT NAME</td>
+                <td><%=name%></td>
+            </tr>
+            <!------------------------ Last Name --------------------------------------->
+            <tr>
+            <td>ROLL NO</td>
+            <td><%=rollno%>
+            </td>
+        </tr>
+        <tr>
+            <td>HOSTEL NAME:</td>
+            <td>
+                <input type="text" name="hostelName" placeholder=" Example: NC 123">
+            </td>
+            <td>ROOM NUMBER:</td>
+            <td>
+                <input type="number" name="roomNumber" placeholder="Example: room no 59">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Report Your Problem: <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+            <td>
+                <input type="text" name="problemTitle" placeholder="Write Your Problem">
+                (Max 50 Characters Allowed)
+                
+</td>
+</tr>
+ <td> <br> Describe Your Problem<br></td>
+ <td> <input type="text" name="describeProblem" maxlength="500" placeholder="explain" /></td>
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </td>
+</tr>
+</table>
+</form>
+
+
+</body>
+</html>
